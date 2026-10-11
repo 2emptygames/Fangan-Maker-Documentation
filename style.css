@@ -1,3 +1,71 @@
-h1 {
-    color: blue;
+@font-face {
+    font-family: 'Lucida Console';
+    src: url(assets/fonts/lucon.ttf);
+}
+
+body {
+    background-image: url(assets/bg/FanganMakerWebsiteBG.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Lucida Console', sans-serif;
+    margin: 0;
+}
+
+h1, h2, p {
+    color: rgb(225, 223, 223);
+}
+
+.logoImage {
+    border: 1px;
+    border-radius: 8px;
+}
+
+.mainBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.visibleBox {
+    width: fit-content;
+    padding: 10px;
+    border: 5px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 75%);
+}
+
+.title {
+    align-items: center;
+    justify-content: center;
+}
+
+.downloads {
+    align-items: center;
+    justify-content: center;
+}
+
+.socialMedia {
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    color: white;
+    font-family: 'Lucida Console', sans-serif;
+    background-color: rgba(63, 62, 62, 0.75);
+    padding: 7px;
+    display: inline-block;
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, 0%);
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+.button:hover {
+    transform: scale(1.1);
+    background-color: rgba(232, 6, 6, 0.25);
 }
