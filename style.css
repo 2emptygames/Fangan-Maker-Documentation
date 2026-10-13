@@ -7,18 +7,30 @@ body {
     background-image: url(assets/bg/FanganMakerWebsiteBG.png);
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
     background-attachment: fixed;
     font-family: 'Lucida Console', sans-serif;
     margin: 0;
+    min-width: 0;
 }
 
 h1, h2, h3, p {
     color: rgb(225, 223, 223);
 }
 
+p {
+    text-align: justify;
+}
+
+a {
+    text-decoration: none;
+}
+
 .logoImage {
     border: 1px;
     border-radius: 8px;
+    width: 150px;
+    height: auto;
 }
 
 .mainBox {
@@ -28,14 +40,46 @@ h1, h2, h3, p {
     justify-content: center;
     text-align: center;
     min-height: 100vh;
+    padding: 20px 16px;
 }
 
 .visibleBox {
     width: fit-content;
+    max-width: 100%;
+    padding: clamp(16px, 3vw, 28px);
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 75%);
+}
+
+.contentBox {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.documentationBox {
+    flex: 3 3 300px;
+    max-width: 1000px;
+    width: fit-content;
     padding: 20px;
     border: 5px;
     border-radius: 8px;
-    background-color: rgba(0, 0, 0, 75%);
+    background-color: rgba(37, 37, 37, 0.5);
+    box-sizing: border-box;
+}
+
+.sidebarBox {
+    flex: 1 1 20px;
+    max-width: 300px;
+    width: fit-content;
+    padding: 20px;
+    border: 5px;
+    border-radius: 8px;
+    background-color: rgba(37, 37, 37, 0.5);
+    box-sizing: border-box;
 }
 
 .title {
