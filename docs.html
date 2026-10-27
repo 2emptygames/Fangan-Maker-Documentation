@@ -216,7 +216,7 @@
                                     <br>
                                     <li>Textbox Image:</li>
                                     <br>
-                                    <dt>Your character's textbox image, selected from your computer. This image must be stored in "img/pictures". </dt>
+                                    <dt>Your character's textbox image, selected from your computer. This image must be stored in "img/pictures".</dt>
                                     <br>
                                     <dt>Please note that this image's size must match your game's resolution. For example, if your game's resolution is "1920px x 1080px", your textbox image size must also be "1920px x 1080px".</dt>
                                     <br>
@@ -590,6 +590,10 @@
                                     <br>
                                     <dt>The position your text will appear on screen for this Free Time Event.</dt>
                                     <br>
+                                    <li>Text Background:</li>
+                                    <br>
+                                    <dt>The background your text will have for this Free Time Event.</dt>
+                                    <br>
                                 </ul>
                             </div>
                             <h4>>delete free time event</h4>
@@ -631,21 +635,534 @@
                             <h2 id="dailyLife">>daily life section</h2>
                             <p>In the Daily Life section of Fangan Maker, you will be able to create a complete Daily Life segment for your project. It consists of four subsections.</p>
                             <h3 id="regularDialogue">>regular dialogue</h3>
-                            <p>This is a work in progress.</p>
-                            <h4>>subsection goes here</h4>
-                            <p>This is a work in progress.</p>
+                            <p>The Regular Dialogue section allows you to add most kinds of dialogue into your game (excluding CGs, Videos, Free Time Events and Investigations). To add dialogue into your game, you must fill out the following sections before clicking the "Add Dialogue" button:</p>
+                            <div class="listDiv">
+                                <ul>
+                                    <li>RPG Maker Data</li>
+                                    <br>
+                                    <li>Sprite Customization</li>
+                                    <br>
+                                    <li>Volume Customization</li>
+                                    <br>
+                                    <li>Text Customization</li>
+                                </ul>
+                            </div>
+                            <p>These mandatory sections have been marked using the (☆) symbol both in the documentation and inside of Fangan Maker for ease of access.</p>
+                            <h4>>rpg maker data (☆)</h4>
+                            <p>RPG Maker Data allows you to provide Fangan Maker with all the necessary data so it can automatically add your dialogue into your game. This section must be filled out before clicking the "Add Dialogue" button.</p>
+                            <div class="listDiv">
+                                <ul>
+                                    <li>Event ID</li>
+                                    <br>
+                                    <dt>The event ID number for the event you want your dialogue to be in. To learn how to find an event's ID number, please refer to <a href="#howToID">this section</a>.</dt>
+                                    <br>
+                                    <li>Event Page</li>
+                                    <br>
+                                    <dt>The event page number for the event you want your dialogue to be in. The default value is suggested for people without RPG Maker experience.</dt>
+                                    <br>
+                                    <li>Map Selection</li>
+                                    <br>
+                                    <dt>A list featuring all the map files that currently exist within your project. You must select the one you want your scene to be in.</dt>
+                                    <br>
+                                    <li>Script Selection</li>
+                                    <br>
+                                    <dt>Your script, selected from your computer. Your script format must be "txt". To learn how to write scripts for Fangan Maker, please refer to <a href="#howToScript">this section</a>.</dt>
+                                    <br>
+                                    <li>Event Trigger</li>
+                                    <br>
+                                    <dt>The event trigger dictates how your event will activate in RPG Maker. For automatic scenes, the default setting of "Parallel" is suggested. If you want your scene to activate when approaching a particular character, "Action Button" is suggested.</dt>
+                                    <br>
+                                    <dt>Please note that the event trigger will not update unless you press the "Change Event Trigger" button. It will not update when simply clicking the "Add Dialogue" button. </dt>
+                                    <br>
+                                </ul>
+                            </div>
+                            <h4>>sprite customization (☆)</h4>
+                            <p>Sprite customization allows you to change properties associated with the sprites present in your script. This section must be filled out before clicking the "Add Dialogue" button.</p>
+                            <br>
+                            <div class="listDiv">
+                                <ul>
+                                    <li>Sprite Position:</li>
+                                    <br>
+                                    <dt>The position your sprite will be in for this Free Time Event.</dt>
+                                    <br>
+                                    <li>Sprite Image Layer:</li>
+                                    <br>
+                                    <dt>This number dictates the layer your sprite image will be on. This number must be lower than the textbox image number, or the sprites will appear above the textbox. This number will be shared by all characters. The default value is suggested for people without RPG Maker experience.</dt>
+                                    <br>
+                                </ul>
+                            </div>
+                            <h4>>volume customization (☆)</h4>
+                            <p>Volume customization allows you to change properties associated with the volume of the audio present in your script, whether it's music, voicelines or SFX. This section must be filled out before clicking the "Add Dialogue" button.</p>
+                            <br>
+                            <div class="listDiv">
+                                <ul>
+                                    <li>Voiceline Volume:</li>
+                                    <br>
+                                    <dt>The volume your voicelines will have for this Free Time Event.</dt>
+                                    <br>
+                                    <li>Music Volume:</li>
+                                    <br>
+                                    <dt>The volume you music will have for this Free Time Event.</dt>
+                                    <br>
+                                    <li>SFX Volume:</li>
+                                    <br>
+                                    <dt>The volume your SFX will have for this Free Time Event.</dt>
+                                    <br>
+                                </ul>
+                            </div>
+                            <h4>>text customization (☆)</h4>
+                            <p>Text customization allows you to change properties associated with the text present in your script. This section must be filled out before clicking the "Add Dialogue" button.</p>
+                            <br>
+                            <div class="listDiv">
+                                <ul>
+                                    <li>Text Position:</li>
+                                    <br>
+                                    <dt>The position your text will appear on screen for this Free Time Event.</dt>
+                                    <br>
+                                    <li>Text Background:</li>
+                                    <br>
+                                    <dt>The background your text will have for this Free Time Event.</dt>
+                                    <br>
+                                </ul>
+                            </div>
+                            <h4>>scene prerequisites</h4>
+                            <p>Scene Prerequisites allows you to set a list of requisites that must be met before your dialogue activates, allowing all your scenes to play in the desired order. All Scene Prerequisites are independent from one another and must be individually added by clicking the corresponding button.</p>
+                            <div class="listDiv">
+                                <ul>
+                                    <li>Prerequisites 1 & 2 (Switch)</li>
+                                    <br>
+                                    <dt>Select the switch you would like to set as a prerequisite from a list featuring all switches you have currently created. If the switch is ON, your scene will play.</dt>
+                                    <br>
+                                    <dt>To learn more about switches, please refer to <a href="https://www.youtube.com/watch?v=5KkidYaIA1Q">this tutorial</a>.</dt>
+                                    <br>
+                                    <li>Prerequisite 3 (Variable)</li>
+                                    <br>
+                                    <dt>Select the variable you would like to set as a prerequisite from a list featuring all variables you have currently created. Assign your variable a target value. If your variable is equal or greater than the value you have entered, your scene will play.</dt>
+                                    <br>
+                                    <dt>To learn more about variables, please refer to <a href=https://www.youtube.com/watch?v=SEsmmkDEOQk>this tutorial</a>.</dt>
+                                    <br>
+                                </ul>
+                            </div>
+                            <h4>>end scene</h4>
+                            <p>End scene allows you to put an end to your current scene and prepare for your next one. It will automatically delete the sprites and textboxes present on screen, turn OFF the switch for the current scene and turn ON the switch for the next scene. To end a scene, you must fill out the entire section before clicking the "End Scene" button.</p>
+                            <div class="listDiv">
+                                <ul>
+                                    <li>Current Scene</li>
+                                    <br>
+                                    <dt>A list featuring all the switches you have currently created. You must select the one you used as a prerequisite for your current scene.</dt>
+                                    <br>
+                                    <li>Next Scene</li>
+                                    <br>
+                                    <dt>A list featuring all the switches you have currently created. You must select the one you want will use as a prerequisite for your next scene.</dt>
+                                    <br>
+                                </ul>
+                            </div>
+                            <p>Please note that end scene takes the event ID, event page and map selection values from the RPG Maker Data section.</p>
+                            <h4>>add teleport</h4>
+                            <p>Add teleport allows you to add a teleport to a different map. For people without RPG Maker experience, it's suggested to only use add teleport after you have already used end scene. To add a teleport, you must fill out the entire section before clicking the "Add Teleport" button.</p>
+                            <div class="listDiv">
+                                <ul>
+                                    <li>Map Selection</li>
+                                    <br>
+                                    <dt>A list featuring all the map files that currently exist within your project. You must select the one you want to teleport to.</dt>
+                                    <br>
+                                    <li>X Coordinate</li>
+                                    <br>
+                                    <dt>The X coordinate for your character's position in the map you are teleporting to. Must be a whole number.</dt>
+                                    <br>
+                                    <li>Y Coordinate</li>
+                                    <br>
+                                    <dt>The Y coordinate for your character's position in the map you are teleporting to. Must be a whole number.</dt>
+                                    <br>
+                                    <li>Direction</li>
+                                    <br>
+                                    <dt>The direction your map character will be looking towards after the teleport has finished.</dt>
+                                    <br>
+                                    <li>Fade</li>
+                                    <br>
+                                    <dt>The color of the fade effect that plays before the teleport.</dt>
+                                    <br>
+                                </ul>
+                            </div>
                             <h3 id="cgs">>cgs</h3>
-                            <p>This is a work in progress.</p>
-                            <h4>>subsection goes here</h4>
-                            <p>This is a work in progress.</p>
+                            <p>The CG section allows you to add dialogue that includes a CG into your game. To add dialogue into your game, you must fill out the following sections before clicking the "Add Dialogue" button:</p>
+                            <div class="listDiv">
+                                <ul>
+                                    <li>RPG Maker Data</li>
+                                    <br>
+                                    <li>CG Customization</li>
+                                    <br>
+                                    <li>Volume Customization</li>
+                                    <br>
+                                    <li>Text Customization</li>
+                                </ul>
+                            </div>
+                            <p>These mandatory sections have been marked using the (☆) symbol both in the documentation and inside of Fangan Maker for ease of access.</p>
+                            <h4>>rpg maker data (☆)</h4>
+                            <p>RPG Maker Data allows you to provide Fangan Maker with all the necessary data so it can automatically add your dialogue into your game. This section must be filled out before clicking the "Add Dialogue" button.</p>
+                            <div class="listDiv">
+                                <ul>
+                                    <li>Event ID</li>
+                                    <br>
+                                    <dt>The event ID number for the event you want your dialogue to be in. To learn how to find an event's ID number, please refer to <a href="#howToID">this section</a>.</dt>
+                                    <br>
+                                    <li>Event Page</li>
+                                    <br>
+                                    <dt>The event page number for the event you want your dialogue to be in. The default value is suggested for people without RPG Maker experience.</dt>
+                                    <br>
+                                    <li>Map Selection</li>
+                                    <br>
+                                    <dt>A list featuring all the map files that currently exist within your project. You must select the one you want your scene to be in.</dt>
+                                    <br>
+                                    <li>Script Selection</li>
+                                    <br>
+                                    <dt>Your script, selected from your computer. Your script format must be "txt". To learn how to write scripts for Fangan Maker, please refer to <a href="#howToScript">this section</a>.</dt>
+                                    <br>
+                                    <li>Event Trigger</li>
+                                    <br>
+                                    <dt>The event trigger dictates how your event will activate in RPG Maker. For automatic scenes, the default setting of "Parallel" is suggested. If you want your scene to activate when approaching a particular character, "Action Button" is suggested.</dt>
+                                    <br>
+                                    <dt>Please note that the event trigger will not update unless you press the "Change Event Trigger" button. It will not update when simply clicking the "Add Dialogue" button. </dt>
+                                    <br>
+                                </ul>
+                            </div>
+                            <h4>>cg customization (☆)</h4>
+                            <p>CG customization allows you to change properties associated with the CG image present in your scene. This section must be filled out before clicking the "Add Dialogue" button.</p>
+                            <div class="listDiv">
+                                <ul>
+                                    <li>CG Selection:</li>
+                                    <br>
+                                    <dt>Your CG image, selected from your computer. This image must be stored in "img/pictures".</dt>
+                                    <br>
+                                    <li>CG X Scale:</li>
+                                    <br>
+                                    <dt>This number dictates the scale of the CG on the X coordinate, meaning how big it is horizontally. If you want the CG to be proportional, this number should be equal to the CG Y Scale.</dt>
+                                    <br>
+                                    <li>CG Y Scale:</li>
+                                    <br>
+                                    <dt>This number dictates the scale of the CG on the Y coordinate, meaning how big it is vertically. If you want the CG to be proportional, this number should be equal to the CG X Scale.</dt>
+                                    <br>
+                                </ul>
+                            </div>
+                            <h4>>volume customization (☆)</h4>
+                            <p>Volume customization allows you to change properties associated with the volume of the audio present in your script, whether it's music, voicelines or SFX. This section must be filled out before clicking the "Add Dialogue" button.</p>
+                            <br>
+                            <div class="listDiv">
+                                <ul>
+                                    <li>Voiceline Volume:</li>
+                                    <br>
+                                    <dt>The volume your voicelines will have for this Free Time Event.</dt>
+                                    <br>
+                                    <li>Music Volume:</li>
+                                    <br>
+                                    <dt>The volume you music will have for this Free Time Event.</dt>
+                                    <br>
+                                    <li>SFX Volume:</li>
+                                    <br>
+                                    <dt>The volume your SFX will have for this Free Time Event.</dt>
+                                    <br>
+                                </ul>
+                            </div>
+                            <h4>>text customization (☆)</h4>
+                            <p>Text customization allows you to change properties associated with the text present in your script. This section must be filled out before clicking the "Add Dialogue" button.</p>
+                            <br>
+                            <div class="listDiv">
+                                <ul>
+                                    <li>Text Position:</li>
+                                    <br>
+                                    <dt>The position your text will appear on screen for this Free Time Event.</dt>
+                                    <br>
+                                    <li>Text Background:</li>
+                                    <br>
+                                    <dt>The background your text will have for this Free Time Event.</dt>
+                                    <br>
+                                </ul>
+                            </div>
+                            <h4>>scene prerequisites</h4>
+                            <p>Scene Prerequisites allows you to set a list of requisites that must be met before your dialogue activates, allowing all your scenes to play in the desired order. All Scene Prerequisites are independent from one another and must be individually added by clicking the corresponding button.</p>
+                            <div class="listDiv">
+                                <ul>
+                                    <li>Prerequisites 1 & 2 (Switch)</li>
+                                    <br>
+                                    <dt>Select the switch you would like to set as a prerequisite from a list featuring all switches you have currently created. If the switch is ON, your scene will play.</dt>
+                                    <br>
+                                    <dt>To learn more about switches, please refer to <a href="https://www.youtube.com/watch?v=5KkidYaIA1Q">this tutorial</a>.</dt>
+                                    <br>
+                                    <li>Prerequisite 3 (Variable)</li>
+                                    <br>
+                                    <dt>Select the variable you would like to set as a prerequisite from a list featuring all variables you have currently created. Assign your variable a target value. If your variable is equal or greater than the value you have entered, your scene will play.</dt>
+                                    <br>
+                                    <dt>To learn more about variables, please refer to <a href=https://www.youtube.com/watch?v=SEsmmkDEOQk>this tutorial</a>.</dt>
+                                    <br>
+                                </ul>
+                            </div>
+                            <h4>>end scene</h4>
+                            <p>End scene allows you to put an end to your current scene and prepare for your next one. It will automatically delete the sprites and textboxes present on screen, turn OFF the switch for the current scene and turn ON the switch for the next scene. To end a scene, you must fill out the entire section before clicking the "End Scene" button.</p>
+                            <div class="listDiv">
+                                <ul>
+                                    <li>Current Scene</li>
+                                    <br>
+                                    <dt>A list featuring all the switches you have currently created. You must select the one you used as a prerequisite for your current scene.</dt>
+                                    <br>
+                                    <li>Next Scene</li>
+                                    <br>
+                                    <dt>A list featuring all the switches you have currently created. You must select the one you want will use as a prerequisite for your next scene.</dt>
+                                    <br>
+                                </ul>
+                            </div>
+                            <p>Please note that end scene takes the event ID, event page and map selection values from the RPG Maker Data section.</p>
+                            <h4>>add teleport</h4>
+                            <p>Add teleport allows you to add a teleport to a different map. For people without RPG Maker experience, it's suggested to only use add teleport after you have already used end scene. To add a teleport, you must fill out the entire section before clicking the "Add Teleport" button.</p>
+                            <div class="listDiv">
+                                <ul>
+                                    <li>Map Selection</li>
+                                    <br>
+                                    <dt>A list featuring all the map files that currently exist within your project. You must select the one you want to teleport to.</dt>
+                                    <br>
+                                    <li>X Coordinate</li>
+                                    <br>
+                                    <dt>The X coordinate for your character's position in the map you are teleporting to. Must be a whole number.</dt>
+                                    <br>
+                                    <li>Y Coordinate</li>
+                                    <br>
+                                    <dt>The Y coordinate for your character's position in the map you are teleporting to. Must be a whole number.</dt>
+                                    <br>
+                                    <li>Direction</li>
+                                    <br>
+                                    <dt>The direction your map character will be looking towards after the teleport has finished.</dt>
+                                    <br>
+                                    <li>Fade</li>
+                                    <br>
+                                    <dt>The color of the fade effect that plays before the teleport.</dt>
+                                    <br>
+                                </ul>
+                            </div>
                             <h3 id="videos">>videos</h3>
-                            <p>This is a work in progress.</p>
-                            <h4>>subsection goes here</h4>
-                            <p>This is a work in progress.</p>
+                            <p>The video section allows you to add a video into your game. To add a video into your game, you must fill out the following sections before clicking the "Add Video" button.</p>
+                            <div class="listDiv">
+                                <ul>
+                                    <li>RPG Maker Data</li>
+                                    <br>
+                                    <li>Add Video</li>
+                                    <br>
+                                </ul>
+                            </div>
+                            <p>These mandatory sections have been marked using the (☆) symbol both in the documentation and inside of Fangan Maker for ease of access.</p>
+                            <h4>>rpg maker data (☆)</h4>
+                            <p>RPG Maker Data allows you to provide Fangan Maker with all the necessary data so it can automatically add your video into your game. This section must be filled out before clicking the "Add Video" button.</p>
+                            <div class="listDiv">
+                                <ul>
+                                    <li>Event ID</li>
+                                    <br>
+                                    <dt>The event ID number for the event you want your dialogue to be in. To learn how to find an event's ID number, please refer to <a href="#howToID">this section</a>.</dt>
+                                    <br>
+                                    <li>Event Page</li>
+                                    <br>
+                                    <dt>The event page number for the event you want your dialogue to be in. The default value is suggested for people without RPG Maker experience.</dt>
+                                    <br>
+                                    <li>Map Selection</li>
+                                    <br>
+                                    <dt>A list featuring all the map files that currently exist within your project. You must select the one you want your scene to be in.</dt>
+                                    <br>
+                                    <li>Script Selection</li>
+                                    <br>
+                                    <dt>Your script, selected from your computer. Your script format must be "txt". To learn how to write scripts for Fangan Maker, please refer to <a href="#howToScript">this section</a>.</dt>
+                                    <br>
+                                    <li>Event Trigger</li>
+                                    <br>
+                                    <dt>The event trigger dictates how your event will activate in RPG Maker. For automatic scenes, the default setting of "Parallel" is suggested. If you want your scene to activate when approaching a particular character, "Action Button" is suggested.</dt>
+                                    <br>
+                                    <dt>Please note that the event trigger will not update unless you press the "Change Event Trigger" button. It will not update when simply clicking the "Add Dialogue" button. </dt>
+                                    <br>
+                                </ul>
+                            </div>
+                            <h4>>add video (☆)</h4>
+                            <p>Add video allows you to change properties associated with the video present in your scene. This section must be filled before clicking the "Add Video" button.</p>
+                            <div class="listDiv">
+                                <ul>
+                                    <li>Select Video</li>
+                                    <br>
+                                    <dt>Your video, selected from your computer. Your video format must be "webm". This file must be stored in "movies".</dt>
+                                    <br>
+                                </ul>
+                            </div>
                             <h3 id="freeTimeEvents">>free time events</h3>
-                            <p>This is a work in progress.</p>
-                            <h4>>subsection goes here</h4>
-                            <p>This is a work in progress.</p>
+                            <p>The Free Time Event section allows you to add Free Time Events into your game. Please note that to add Free Time Events into your game, they must have been previously created using the Create Free Time Event functionality found in <a href="#fteSetup">Free Time Event Setup</a>. To add Free Time Events into your game, you must fill out the following sections before clicking the "Add Free Time Event" button.</p>
+                            <div class="listDiv">
+                                <ul>
+                                    <li>RPG Maker Data</li>
+                                    <br>
+                                    <li>Free Time Event Data</li>
+                                    <br>
+                                    <li>Sprite Customization</li>
+                                    <br>
+                                    <li>Volume Customization</li>
+                                    <br>
+                                    <li>Text Customization</li>
+                                    <br>
+                                    <li>Choice Customization</li>
+                                    <br>
+                                </ul>
+                            </div>
+                            <p>These mandatory sections have been marked using the (☆) symbol both in the documentation and inside of Fangan Maker for ease of access.</p>
+                            <h4>>rpg maker data (☆)</h4>
+                            <p>RPG Maker Data allows you to provide Fangan Maker with all the necessary data so it can automatically add your dialogue into your game. This section must be filled out before clicking the "Add Dialogue" button.</p>
+                            <div class="listDiv">
+                                <ul>
+                                    <li>Event ID</li>
+                                    <br>
+                                    <dt>The event ID number for the event you want your dialogue to be in. To learn how to find an event's ID number, please refer to <a href="#howToID">this section</a>.</dt>
+                                    <br>
+                                    <li>Event Page</li>
+                                    <br>
+                                    <dt>The event page number for the event you want your dialogue to be in. The default value is suggested for people without RPG Maker experience.</dt>
+                                    <br>
+                                    <li>Map Selection</li>
+                                    <br>
+                                    <dt>A list featuring all the map files that currently exist within your project. You must select the one you want your scene to be in.</dt>
+                                    <br>
+                                    <li>Script Selection</li>
+                                    <br>
+                                    <dt>Your script, selected from your computer. Your script format must be "txt". To learn how to write scripts for Fangan Maker, please refer to <a href="#howToScript">this section</a>.</dt>
+                                    <br>
+                                    <li>Event Trigger</li>
+                                    <br>
+                                    <dt>The event trigger dictates how your event will activate in RPG Maker. For automatic scenes, the default setting of "Parallel" is suggested. If you want your scene to activate when approaching a particular character, "Action Button" is suggested.</dt>
+                                    <br>
+                                    <dt>Please note that the event trigger will not update unless you press the "Change Event Trigger" button. It will not update when simply clicking the "Add Dialogue" button. </dt>
+                                    <br>
+                                </ul>
+                            </div>
+                            <h4>>free time event data (☆)</h4>
+                            <p>Free Time Event Data allows you to provide Fangan Maker with all the necessary Free Time Event data so it can correctly add your Free Time Event into your game. This section must be filled out before clicking the "Add Free Time Event" button.</p>
+                            <div class="listDiv">
+                                <ul>
+                                    <li>Free Time Event Variable</li>
+                                    <br>
+                                    <dt>A list featuring all the variables you have currently created. You must select a variable to keep track of Free Time Event progress for your selected character. Each character must have their own progress variable.</dt>
+                                    <br>
+                                    <li>Free Time Event Switch</li>
+                                    <br>
+                                    <dt>A list featuring all the switches you have currently created. You must select a switch to keep track of the Free Time Event slot.</dt>
+                                    <br>
+                                    <li>How many Free Time Events are you adding?</li>
+                                    <br>
+                                    <dt>A selector allowing you to choose how many Free Time Events are available to the player. Fangan Maker supports up to 5 Free Time Events in one Free Time Event slot.</dt>
+                                    <br>
+                                    <li>Select Free Time Event Character</li>
+                                    <br>
+                                    <dt>A list featuring all the characters you have currently created. You must select the one you are adding a Free Time Event slot for.</dt>
+                                    <br>
+                                    <li>Free Time Event 1-5</li>
+                                    <br>
+                                    <dt>A list featuring all of the Free Time Events you have currently created for the selected characters. You must select the Free Time Event you would like to have played in each ordered spot from 1 to 5.</dt>
+                                    <br>
+                                </ul>
+                            </div>
+                            <h4>>sprite customization (☆)</h4>
+                            <p>Sprite customization allows you to change properties associated with the sprites present in your script. This section must be filled out before clicking the "Add Free Time Event" button.</p>
+                            <br>
+                            <div class="listDiv">
+                                <ul>
+                                    <li>Sprite Position:</li>
+                                    <br>
+                                    <dt>The position your sprite will be in for this Free Time Event.</dt>
+                                    <br>
+                                    <li>Sprite Image Layer:</li>
+                                    <br>
+                                    <dt>This number dictates the layer your sprite image will be on. This number must be lower than the textbox image number, or the sprites will appear above the textbox. This number will be shared by all characters. The default value is suggested for people without RPG Maker experience.</dt>
+                                    <br>
+                                </ul>
+                            </div>
+                            <h4>>volume customization (☆)</h4>
+                            <p>Volume customization allows you to change properties associated with the volume of the audio present in your script, whether it's music, voicelines or SFX. This section must be filled out before clicking the "Add Free Time Event" button.</p>
+                            <br>
+                            <div class="listDiv">
+                                <ul>
+                                    <li>Voiceline Volume:</li>
+                                    <br>
+                                    <dt>The volume your voicelines will have for this Free Time Event.</dt>
+                                    <br>
+                                    <li>Music Volume:</li>
+                                    <br>
+                                    <dt>The volume you music will have for this Free Time Event.</dt>
+                                    <br>
+                                    <li>SFX Volume:</li>
+                                    <br>
+                                    <dt>The volume your SFX will have for this Free Time Event.</dt>
+                                    <br>
+                                </ul>
+                            </div>
+                            <h4>>text customization (☆)</h4>
+                            <p>Text customization allows you to change properties associated with the text present in your script. This section must be filled out before clicking the "Add Free Time Event" button.</p>
+                            <br>
+                            <div class="listDiv">
+                                <ul>
+                                    <li>Text Position:</li>
+                                    <br>
+                                    <dt>The position your text will appear on screen for this Free Time Event.</dt>
+                                    <br>
+                                    <li>Text Background:</li>
+                                    <br>
+                                    <dt>The background your text will have for this Free Time Event.</dt>
+                                    <br>
+                                </ul>
+                            </div>
+                            <h4>>choice customization (☆)</h4>
+                            <p>Choice customization allows you to change properties associated with the choice that is automatically added into your Free Time Event. This section must be filled out before clicking the "Add Free Time Event" button.</p>
+                            <div class="listDiv">
+                                <ul>
+                                    <li>Window Position</li>
+                                    <br>
+                                    <dt>The position your choice will have for this Free Time Event.</dt>
+                                    <br>
+                                    <li>Window Background</li>
+                                    <br>
+                                    <dt>The background your choice window will have for this Free Time Event.</dt>
+                                    <br>
+                                </ul>
+                            </div>
+                            <h4>>end scene</h4>
+                            <p>End scene allows you to put an end to your current scene and prepare for your next one. It will automatically delete the sprites and textboxes present on screen, turn OFF the switch for the current scene and turn ON the switch for the next scene. To end a scene, you must fill out the entire section before clicking the "End Scene" button.</p>
+                            <div class="listDiv">
+                                <ul>
+                                    <li>Current Scene</li>
+                                    <br>
+                                    <dt>A list featuring all the switches you have currently created. You must select the one you used as a prerequisite for your current scene.</dt>
+                                    <br>
+                                    <li>Next Scene</li>
+                                    <br>
+                                    <dt>A list featuring all the switches you have currently created. You must select the one you want will use as a prerequisite for your next scene.</dt>
+                                    <br>
+                                </ul>
+                            </div>
+                            <p>Please note that end scene takes the event ID, event page and map selection values from the RPG Maker Data section.</p>
+                            <h4>>add teleport</h4>
+                            <p>Add teleport allows you to add a teleport to a different map. For people without RPG Maker experience, it's suggested to only use add teleport after you have already used end scene. To add a teleport, you must fill out the entire section before clicking the "Add Teleport" button.</p>
+                            <div class="listDiv">
+                                <ul>
+                                    <li>Map Selection</li>
+                                    <br>
+                                    <dt>A list featuring all the map files that currently exist within your project. You must select the one you want to teleport to.</dt>
+                                    <br>
+                                    <li>X Coordinate</li>
+                                    <br>
+                                    <dt>The X coordinate for your character's position in the map you are teleporting to. Must be a whole number.</dt>
+                                    <br>
+                                    <li>Y Coordinate</li>
+                                    <br>
+                                    <dt>The Y coordinate for your character's position in the map you are teleporting to. Must be a whole number.</dt>
+                                    <br>
+                                    <li>Direction</li>
+                                    <br>
+                                    <dt>The direction your map character will be looking towards after the teleport has finished.</dt>
+                                    <br>
+                                    <li>Fade</li>
+                                    <br>
+                                    <dt>The color of the fade effect that plays before the teleport.</dt>
+                                    <br>
+                                </ul>
+                            </div>
                         </div>
 
                         <div class="deadlyLife">
