@@ -170,7 +170,145 @@
                             <p>To find out what your event ID is, you need to open RPG Maker and double click on your event to open the event page. Once the event page is open, please refer to the upper left corner of it, where you'll see text that reads "ID:XXX". That number is the event ID Fangan Maker is asking you to input.</p>
                             <br>
                             <h3 id="howToScript">>how to make a script in fangan maker?</h3>
-                            <p>This is a work in progress.</p>
+                            <p>To write a script in Fangan Maker, you must follow a set of rules so that it will be correctly added into the game. Each of these rules will be individually explained with both correct and incorrect examples.</p>
+                            <div class="listDiv">
+                                <ul>
+                                    <li>Characters</li>
+                                    <br>
+                                    <li>Sprites</li>
+                                    <br>
+                                    <li>Voicelines</li>
+                                    <br>
+                                    <li>Music</li>
+                                    <br>
+                                    <li>SFX</li>
+                                    <br>
+                                </ul>
+                            </div>
+                            <p>This means that you will be the one that chooses most of the format of the script, making it so that Fangan Maker can adapt to many different script formats.</p>
+                            <p>For the upcoming examples, this is the data that has been added to the project database:</p>
+                            <list class="listDiv">
+                                <ul>
+                                    <li>Characters:</li>
+                                    <br>
+                                    <dt>- Makoto</dt>
+                                    <br>
+                                    <li>Sprites:</li>
+                                    <br>
+                                    <dt>- Makoto-Neutral</dt>
+                                    <br>
+                                    <dt>- Makoto-Happy</dt>
+                                    <br>
+                                    <li>Voicelines:</li>
+                                    <br>
+                                    <dt>- Makoto-Voiceline-Neutral</dt>
+                                    <br>
+                                    <dt>- Makoto-Voiceline-Happy</dt>
+                                    <br>
+                                    <li>Music:</li>
+                                    <br>
+                                    <dt>- BGM-BeautifulDead</dt>
+                                    <br>
+                                    <li>SFX:</li>
+                                    <br>
+                                    <dt>- SFX-Crash</dt>
+                                    <br>
+                                </ul>
+                            </list>
+                            <h4>>scripts must always be in a txt format</h4>
+                            <p>This means that other formats, such as ".docx" or ".pdf" will not work for Fangan Maker scripts. It must be an unformatted ".txt" file.</p>
+                            <div class="image">
+                                <img src="assets/img/ScriptFormat.png" class="image">
+                                <p style="text-align: center;">Correct and incorrect script file format.</p>
+                            </div>
+                            <br>
+                            <h4>>dialogue must be in its own separate line</h4>
+                            <p>Fangan Maker interprets your script line by line, so it will not work if your character name is in the same line as their dialogue.</p>
+                            <div class="image">
+                                <img src="assets/img/SeparateLineWrong.png" class="image">
+                                <p style="text-align: center;">Incorrect line separation.</p>
+                            </div>
+                            <br>
+                            <div class="image">
+                                <img src="assets/img/SeparateLineRight.png" class="image">
+                                <p style="text-align: center;">Correct line separation.</p>
+                            </div>
+                            <br>
+                            <h4>>names are case sensitive</h4>
+                            <p>Fangan Maker is case sensitive, so you have to make sure your capitalization is consistent.</p>
+                            <br>
+                            <div class="image">
+                                <img src="assets/img/CaseSensitiveWrong.png" class="image">
+                                <p style="text-align: center;">Incorrect capitalization.</p>
+                            </div>
+                            <div class="image">
+                                <img src="assets/img/CaseSensitiveRight.png" class="image">
+                                <p style="text-align: center;">Incorrect capitalization.</p>
+                            </div>
+                            <h4>>sprites and voicelines belong to a character</h4>
+                            <p>If you add your sprites or your voicelines before adding a character, Fangan Maker will add them as regular dialogue instead.</p>
+                            <div class="image">
+                                <img src="assets/img/SpritePlacementWrong.png" class="image">
+                                <p style="text-align: center;">Incorrect sprite and voiceline placement.</p>
+                            </div>
+                            <br>
+                            <div class="image">
+                                <img src="assets/img/SpritePlacementRight.png" class="image">
+                                <p style="text-align: center;">Correct sprite and voiceline placement.</p>
+                            </div>
+                            <br>
+                            <h4>>if names are the same, a hierarchy applies</h4>
+                            <p>Fangan Maker allows all database files to share names, though this practice is highly advised against. When different files share the same name, priorities are assigned following this order:</p>
+                            <div class="listDiv">
+                                <ol>
+                                    <li>Characters</li>
+                                    <br>
+                                    <li>Sprites</li>
+                                    <br>
+                                    <li>Voicelines</li>
+                                    <br>
+                                    <li>Music</li>
+                                    <br>
+                                    <li>SFX</li>
+                                    <br>
+                                </ol>
+                            </div>
+                            <p>For example, if a sprite and a voiceline share the same name, the sprite is above the voiceline in the hierarchy, so the sprite will be the one that's added into the game.</p>
+                            <br>
+                            <h4>>reserved words</h4>
+                            <p>Reserved words are terms you can use on your script to make Fangan Maker perform actions mid-dialogue which you would otherwise have to program manually. Fangan Maker currently has the following reserved words:</p>
+                            <div class="listDiv">
+                                <ul>
+                                    <li>[delete-sprite]: Deletes the sprite currently on screen.</li>
+                                    <br>
+                                    <li>[delete-textbox]: Deletes the textbox currently on screen.</li>
+                                    <br>
+                                    <li>[stop-bgm]: Stops the music that is currently playing.</li>
+                                    <br>
+                                    <li>[stop-sfx]: Stops the sfx that is currently playing.</li>
+                                    <br>
+                                    <li>[stop-va]: Stops the voiceline that is currently playing.</li>
+                                    <br>
+                                    <li>[fadeout-screen]: Fades the screen out.</li>
+                                    <br>
+                                    <li>[fadein-screen]: Fades the screen in.</li>
+                                    <br>
+                                    <li>[shake-screen]: Shakes the screen for 1 second.</li>
+                                    <br>
+                                    <li>[wait-60]: Waits for 60 frames (1 second).</li>
+                                    <br>
+                                    <li>[wait-120]: Waits for 120 frames (2 seconds).</li>
+                                    <br>
+                                </ul>
+                            </div>
+                            <br>
+                            <h4>>complete dialogue example</h4>
+                            <p>You can see a complete dialogue example using all of Fangan Maker's scripting features on the image below.</p>
+                            <div class="image">
+                                <img src="assets/img/DialogueExample.png" class="image">
+                                <p style="text-align: center;">Correct dialogue example.</p>
+                            </div>
+                            <br>
                             <br>
                         </div>
 
@@ -1169,9 +1307,229 @@
                             <h2 id="deadlyLife">>deadly life section</h2>
                             <p>In the Deadly Life section of Fangan Maker, you will be able to create parts of a Deadly Life segment for your project. The Deadly Life section is currently incomplete, and future updates will add more content to it. It consists of one subsection.</p>
                             <h3 id="investigation">>investigation</h3>
-                            <p>This is a work in progress.</p>
-                            <h4>>subsection goes here</h4>
-                            <p>This is a work in progress.</p>
+                            <p>The investigation section allows you to add investigation events into your game. To add an investigation into your game, you must fill out the following sections before clicking the "Add Investigation Event" button:</p>
+                            <div class="listDiv">
+                                <ul>
+                                    <li>RPG Maker Data</li>
+                                    <br>
+                                    <li>Investigation Data</li>
+                                    <br>
+                                    <li>Sprite Customization</li>
+                                    <br>
+                                    <li>Volume Customization</li>
+                                    <br>
+                                    <li>Text Customization</li>
+                                    <br>
+                                </ul>
+                            </div>
+                            <p>These mandatory sections have been marked using the (☆) symbol both in the documentation and inside of Fangan Maker for ease of access.</p>
+                            <h4>>rpg maker data (☆)</h4>
+                            <p>RPG Maker Data allows you to provide Fangan Maker with all the necessary data so it can automatically add your investigation event into your game. This section must be filled out before clicking the "Add Investigation Event" button.</p>
+                            <div class="listDiv">
+                                <ul>
+                                    <li>Event ID</li>
+                                    <br>
+                                    <dt>The event ID number for the event you want your dialogue to be in. To learn how to find an event's ID number, please refer to <a href="#howToID">this section</a>.</dt>
+                                    <br>
+                                    <li>Event Page</li>
+                                    <br>
+                                    <dt>The event page number for the event you want your dialogue to be in. The default value is suggested for people without RPG Maker experience.</dt>
+                                    <br>
+                                    <li>Map Selection</li>
+                                    <br>
+                                    <dt>A list featuring all the map files that currently exist within your project. You must select the one you want your scene to be in.</dt>
+                                    <br>
+                                    <li>Script Selection</li>
+                                    <br>
+                                    <dt>Your script, selected from your computer. Your script format must be "txt". To learn how to write scripts for Fangan Maker, please refer to <a href="#howToScript">this section</a>.</dt>
+                                    <br>
+                                    <li>Event Trigger</li>
+                                    <br>
+                                    <dt>The event trigger dictates how your event will activate in RPG Maker. For automatic scenes, the default setting of "Parallel" is suggested. If you want your scene to activate when approaching a particular character, "Action Button" is suggested.</dt>
+                                    <br>
+                                    <dt>Please note that the event trigger will not update unless you press the "Change Event Trigger" button. It will not update when simply clicking the "Add Dialogue" button. </dt>
+                                    <br>
+                                </ul>
+                            </div>
+                            <h4>>investigation data (☆)</h4>
+                            <p>Investigation Data allows you to provide Fangan Maker with all the necessary investigation related data so it can automatically add your investigation event into your game. This section must be filled out before clicking the "Add Investigation Event" button.</p>
+                            <div class="listDiv">
+                                <ul>
+                                    <li>Investigation Global Variable:</li>
+                                    <br>
+                                    <dt>A list featuring all the variables you have currently created. You must select a variable to keep track of the investigation status. This variable must be shared by all investigation events.</dt>
+                                    <br>
+                                    <li>Investigation Global Switch:</li>
+                                    <br>
+                                    <dt>A list featuring all the switches you have currently created. You must select a switch to keep track of the investigation status. This switch must be shared by all investigation events.</dt>
+                                    <br>
+                                    <li>Truth Bullet Switch:</li>
+                                    <br>
+                                    <dt>A list featuring all the switches you have currently created. You must select a switch to represent the <b>last</b> truth bullet that will be obtained in the investigation event.</dt>
+                                    <br>
+                                </ul>
+                            </div>
+                            <h4>>sprite customization (☆)</h4>
+                            <p>Sprite customization allows you to change properties associated with the sprites present in your script. This section must be filled out before clicking the "Add Free Time Event" button.</p>
+                            <br>
+                            <div class="listDiv">
+                                <ul>
+                                    <li>Sprite Position:</li>
+                                    <br>
+                                    <dt>The position your sprite will be in for this Free Time Event.</dt>
+                                    <br>
+                                    <li>Sprite Image Layer:</li>
+                                    <br>
+                                    <dt>This number dictates the layer your sprite image will be on. This number must be lower than the textbox image number, or the sprites will appear above the textbox. This number will be shared by all characters. The default value is suggested for people without RPG Maker experience.</dt>
+                                    <br>
+                                </ul>
+                            </div>
+                            <h4>>volume customization (☆)</h4>
+                            <p>Volume customization allows you to change properties associated with the volume of the audio present in your script, whether it's music, voicelines or SFX. This section must be filled out before clicking the "Add Free Time Event" button.</p>
+                            <br>
+                            <div class="listDiv">
+                                <ul>
+                                    <li>Voiceline Volume:</li>
+                                    <br>
+                                    <dt>The volume your voicelines will have for this Free Time Event.</dt>
+                                    <br>
+                                    <li>Music Volume:</li>
+                                    <br>
+                                    <dt>The volume you music will have for this Free Time Event.</dt>
+                                    <br>
+                                    <li>SFX Volume:</li>
+                                    <br>
+                                    <dt>The volume your SFX will have for this Free Time Event.</dt>
+                                    <br>
+                                </ul>
+                            </div>
+                            <h4>>text customization (☆)</h4>
+                            <p>Text customization allows you to change properties associated with the text present in your script. This section must be filled out before clicking the "Add Free Time Event" button.</p>
+                            <br>
+                            <div class="listDiv">
+                                <ul>
+                                    <li>Text Position:</li>
+                                    <br>
+                                    <dt>The position your text will appear on screen for this Free Time Event.</dt>
+                                    <br>
+                                    <li>Text Background:</li>
+                                    <br>
+                                    <dt>The background your text will have for this Free Time Event.</dt>
+                                    <br>
+                                </ul>
+                            </div>
+                            <h4>>obtain truth bullet</h4>
+                            <p>Obtain truth bullet allows you to give the player a truth bullet in the middle of an investigation event, if that investigation event has more than one truth bullet. Multiple obtain truth bullet may be used in one investigation event. The last truth bullet obtained in an event must be omitted. To obtain a truth bullet, you must fill out the entire section before clicking the "Obtain Truth Bullet" button.</p>
+                            <div class="listDiv">
+                                <ul>
+                                    <li>Add Animation?:</li>
+                                    <br>
+                                    <dt>A toggle allowing you to choose whether or not you want an "Obtained truth bullet animation" to play when the truth bullet has been obtained.</dt>
+                                    <br>
+                                    <li>Truth Bullet Switch:</li>
+                                    <br>
+                                    <dt>A list featuring all the switches you have currently created. You must select a switch to represent the truth bullet that will be obtained in the middle of the investigation event.</dt>
+                                    <br>
+                                    <li>Select Image:</li>
+                                    <br>
+                                    <dt>Your truth bullet animation image, selected from your computer. This image must be stored in "img/pictures".</dt>
+                                    <br>
+                                    <li>Center X Coordinate:</li>
+                                    <br>
+                                    <dt>This number dictates the position of the obtained truth bullet animation picture on the X coordinate, meaning its horizontal position. Make sure the number you input places the image on the center of the screen.</dt>
+                                    <br>
+                                    <li>Center Y Coordinate:</li>
+                                    <br>
+                                    <dt>This number dictates the position of the obtained truth bullet animation picture on the Y coordinate, meaning its vertical position. Make sure the number you input places the image on the center of the screen.</dt>
+                                    <br>
+                                    <li>Duration:</li>
+                                    <br>
+                                    <dt>The duration of the animation, measured in frames. 60 frames = 1 second.</dt>
+                                    <br>
+                                    <li>Delete Textbox and Sprites?:</li>
+                                    <br>
+                                    <dt>A toggle allowing you to choose whether or not you would like the textbox and sprites removed while the animation plays.</dt>
+                                    <br>
+                                </ul>
+                            </div>
+                            <h4>>end investigation event</h4>
+                            <p>End investigation event allows you to put an end to your investigation event. It will automatically delete the sprites and textboxes present on screen, turn ON the switch for the corresponding truth bullet and increase the investigation variable by one. To end an investigation event, you must fill out the entire section before clicking the "End Investigation" button.</p>
+                            <div class="listDiv">
+                                <ul>
+                                    <li>Add Animation?:</li>
+                                    <br>
+                                    <dt>A toggle allowing you to choose whether or not you want an "Obtained truth bullet animation" to play when the truth bullet has been obtained.</dt>
+                                    <br>
+                                    <li>Select Image:</li>
+                                    <br>
+                                    <dt>Your truth bullet animation image, selected from your computer. This image must be stored in "img/pictures".</dt>
+                                    <br>
+                                    <li>Center X Coordinate:</li>
+                                    <br>
+                                    <dt>This number dictates the position of the obtained truth bullet animation picture on the X coordinate, meaning its horizontal position. Make sure the number you input places the image on the center of the screen.</dt>
+                                    <br>
+                                    <li>Center Y Coordinate:</li>
+                                    <br>
+                                    <dt>This number dictates the position of the obtained truth bullet animation picture on the Y coordinate, meaning its vertical position. Make sure the number you input places the image on the center of the screen.</dt>
+                                    <br>
+                                    <li>Duration:</li>
+                                    <br>
+                                    <dt>The duration of the animation, measured in frames. 60 frames = 1 second.</dt>
+                                    <br>
+                                    <li>Delete Textbox and Sprites?:</li>
+                                    <br>
+                                    <dt>A toggle allowing you to choose whether or not you would like the textbox and sprites removed while the animation plays.</dt>
+                                    <br>
+                                </ul>
+                            </div>
+                            <p>Please note that end investigation event takes the event ID, event page and map selection values from the RPG Maker Data section.</p>
+                            <h4>>end investigation</h4>
+                            <p>End investigation allows you to put an end to your investigation and prepare for the next scene. It will automatically delete the sprites and textboxes present on screen, turn OFF the switch for the investigation and turn ON the switch for the next scene. To end an investigation, you must fill out the entire section before clicking the "End Investigation" button.</p>
+                            <div class="listDiv">
+                                <ul>
+                                    <li>Total number of events your investigation has:</li>
+                                    <br>
+                                    <dt>You must enter the total number of events your investigation has. Events with multiple truth bullets count as one singular event.</dt>
+                                    <br>
+                                    <li>Investigation Global Switch:</li>
+                                    <br>
+                                    <dt>A list featuring all the switches you have currently created. You must select the one you previously selected as your investigation global switch.</dt>
+                                    <br>
+                                    <li>Next Scene Switch:</li>
+                                    <br>
+                                    <dt>A list featuring all the switches you have currently created. You must select the one you want will use as a prerequisite for your next scene.</dt>
+                                    <br>
+                                </ul>
+                            </div>
+                            <p>End investigation must be its own individual event, with its trigger set to parallel. If your investigation takes place in multiple maps, there must be an end investigation event in each one of them.</p>
+                            <br>
+                            <p>Please note that end investigation takes the event ID, event page and map selection values from the RPG Maker Data section.</p>
+                            <h4>>add teleport</h4>
+                            <p>Add teleport allows you to add a teleport to a different map. For people without RPG Maker experience, it's suggested to only use add teleport after you have already used end scene. To add a teleport, you must fill out the entire section before clicking the "Add Teleport" button.</p>
+                            <div class="listDiv">
+                                <ul>
+                                    <li>Map Selection</li>
+                                    <br>
+                                    <dt>A list featuring all the map files that currently exist within your project. You must select the one you want to teleport to.</dt>
+                                    <br>
+                                    <li>X Coordinate</li>
+                                    <br>
+                                    <dt>The X coordinate for your character's position in the map you are teleporting to. Must be a whole number.</dt>
+                                    <br>
+                                    <li>Y Coordinate</li>
+                                    <br>
+                                    <dt>The Y coordinate for your character's position in the map you are teleporting to. Must be a whole number.</dt>
+                                    <br>
+                                    <li>Direction</li>
+                                    <br>
+                                    <dt>The direction your map character will be looking towards after the teleport has finished.</dt>
+                                    <br>
+                                    <li>Fade</li>
+                                    <br>
+                                    <dt>The color of the fade effect that plays before the teleport.</dt>
+                                    <br>
+                                </ul>
+                            </div>
                         </div>
                     
                         <h3>>more features coming soon</h3>
