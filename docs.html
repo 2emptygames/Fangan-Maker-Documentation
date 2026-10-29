@@ -728,7 +728,7 @@
                                     <br>
                                     <dt>The position your text will appear on screen for this Free Time Event.</dt>
                                     <br>
-                                    <li>Text Background:</li>
+                                    <li>Text Window Background:</li>
                                     <br>
                                     <dt>The background your text will have for this Free Time Event.</dt>
                                     <br>
@@ -739,7 +739,7 @@
                             <br>
                             <div class="listDiv">
                                 <ul>
-                                    <li>Character Name:</li>
+                                    <li>Select Character:</li>
                                     <br>
                                     <dt>A list featuring all the characters you have currently created. You must select the character the Free Time Events you want to delete belongs to.</dt>
                                     <br>
@@ -857,7 +857,7 @@
                                     <br>
                                     <dt>The position your text will appear on screen for this Free Time Event.</dt>
                                     <br>
-                                    <li>Text Background:</li>
+                                    <li>Text Window Background:</li>
                                     <br>
                                     <dt>The background your text will have for this Free Time Event.</dt>
                                     <br>
@@ -885,11 +885,11 @@
                             <p>End scene allows you to put an end to your current scene and prepare for your next one. It will automatically delete the sprites and textboxes present on screen, turn OFF the switch for the current scene and turn ON the switch for the next scene. To end a scene, you must fill out the entire section before clicking the "End Scene" button.</p>
                             <div class="listDiv">
                                 <ul>
-                                    <li>Current Scene</li>
+                                    <li>Current Scene Switch</li>
                                     <br>
                                     <dt>A list featuring all the switches you have currently created. You must select the one you used as a prerequisite for your current scene.</dt>
                                     <br>
-                                    <li>Next Scene</li>
+                                    <li>Next Scene Switch</li>
                                     <br>
                                     <dt>A list featuring all the switches you have currently created. You must select the one you want will use as a prerequisite for your next scene.</dt>
                                     <br>
@@ -1010,7 +1010,7 @@
                                     <br>
                                     <dt>The position your text will appear on screen for this Free Time Event.</dt>
                                     <br>
-                                    <li>Text Background:</li>
+                                    <li>Text Window Background:</li>
                                     <br>
                                     <dt>The background your text will have for this Free Time Event.</dt>
                                     <br>
@@ -1038,11 +1038,11 @@
                             <p>End scene allows you to put an end to your current scene and prepare for your next one. It will automatically delete the sprites and textboxes present on screen, turn OFF the switch for the current scene and turn ON the switch for the next scene. To end a scene, you must fill out the entire section before clicking the "End Scene" button.</p>
                             <div class="listDiv">
                                 <ul>
-                                    <li>Current Scene</li>
+                                    <li>Current Scene Switch</li>
                                     <br>
                                     <dt>A list featuring all the switches you have currently created. You must select the one you used as a prerequisite for your current scene.</dt>
                                     <br>
-                                    <li>Next Scene</li>
+                                    <li>Next Scene Switch</li>
                                     <br>
                                     <dt>A list featuring all the switches you have currently created. You must select the one you want will use as a prerequisite for your next scene.</dt>
                                     <br>
@@ -1147,27 +1147,17 @@
                             <p>RPG Maker Data allows you to provide Fangan Maker with all the necessary data so it can automatically add your dialogue into your game. This section must be filled out before clicking the "Add Dialogue" button.</p>
                             <div class="listDiv">
                                 <ul>
-                                    <li>Event ID</li>
-                                    <br>
-                                    <dt>The event ID number for the event you want your dialogue to be in. To learn how to find an event's ID number, please refer to <a href="#howToID">this section</a>.</dt>
-                                    <br>
-                                    <li>Event Page</li>
-                                    <br>
-                                    <dt>The event page number for the event you want your dialogue to be in. The default value is suggested for people without RPG Maker experience.</dt>
-                                    <br>
                                     <li>Map Selection</li>
                                     <br>
                                     <dt>A list featuring all the map files that currently exist within your project. You must select the one you want your scene to be in.</dt>
                                     <br>
-                                    <li>Script Selection</li>
+                                    <li>Event ID</li>
                                     <br>
-                                    <dt>Your script, selected from your computer. Your script format must be "txt". To learn how to write scripts for Fangan Maker, please refer to <a href="#howToScript">this section</a>.</dt>
+                                    <dt>The event ID number for the event you want your dialogue to be in. To learn how to find an event's ID number, please refer to <a href="#howToID">this section</a>.</dt>
                                     <br>
-                                    <li>Event Trigger</li>
+                                    <li>Pre Free Time Event Script Selection</li>
                                     <br>
-                                    <dt>The event trigger dictates how your event will activate in RPG Maker. For automatic scenes, the default setting of "Parallel" is suggested. If you want your scene to activate when approaching a particular character, "Action Button" is suggested.</dt>
-                                    <br>
-                                    <dt>Please note that the event trigger will not update unless you press the "Change Event Trigger" button. It will not update when simply clicking the "Add Dialogue" button. </dt>
+                                    <dt>Your script, corresponding to the text that plays before the Free Time Event starts, selected from your computer. Your script format must be "txt". To learn how to write scripts for Fangan Maker, please refer to <a href="#howToScript">this section</a>.</dt>
                                     <br>
                                 </ul>
                             </div>
@@ -1240,7 +1230,7 @@
                                     <br>
                                     <dt>The position your text will appear on screen for this Free Time Event.</dt>
                                     <br>
-                                    <li>Text Background:</li>
+                                    <li>Text Window Background:</li>
                                     <br>
                                     <dt>The background your text will have for this Free Time Event.</dt>
                                     <br>
@@ -1264,11 +1254,15 @@
                             <p>End scene allows you to put an end to your current scene and prepare for your next one. It will automatically delete the sprites and textboxes present on screen, turn OFF the switch for the current scene and turn ON the switch for the next scene. To end a scene, you must fill out the entire section before clicking the "End Scene" button.</p>
                             <div class="listDiv">
                                 <ul>
-                                    <li>Current Scene</li>
+                                    <li>Event Page</li>
+                                    <br>
+                                    <dt>The event page your Free Time Event is located in. If you have more than one Free Time Event, you will have to apply this multiple times.</dt>
+                                    <br>
+                                    <li>Current Scene Switch</li>
                                     <br>
                                     <dt>A list featuring all the switches you have currently created. You must select the one you used as a prerequisite for your current scene.</dt>
                                     <br>
-                                    <li>Next Scene</li>
+                                    <li>Next Scene Switch</li>
                                     <br>
                                     <dt>A list featuring all the switches you have currently created. You must select the one you want will use as a prerequisite for your next scene.</dt>
                                     <br>
@@ -1282,6 +1276,10 @@
                                     <li>Map Selection</li>
                                     <br>
                                     <dt>A list featuring all the map files that currently exist within your project. You must select the one you want to teleport to.</dt>
+                                    <br>
+                                    <li>Event Page</li>
+                                    <br>
+                                    <dt>The event page your Free Time Event is located in. If you have more than one Free Time Event, you will have to apply this multiple times.</dt>
                                     <br>
                                     <li>X Coordinate</li>
                                     <br>
@@ -1327,27 +1325,17 @@
                             <p>RPG Maker Data allows you to provide Fangan Maker with all the necessary data so it can automatically add your investigation event into your game. This section must be filled out before clicking the "Add Investigation Event" button.</p>
                             <div class="listDiv">
                                 <ul>
-                                    <li>Event ID</li>
-                                    <br>
-                                    <dt>The event ID number for the event you want your dialogue to be in. To learn how to find an event's ID number, please refer to <a href="#howToID">this section</a>.</dt>
-                                    <br>
-                                    <li>Event Page</li>
-                                    <br>
-                                    <dt>The event page number for the event you want your dialogue to be in. The default value is suggested for people without RPG Maker experience.</dt>
-                                    <br>
                                     <li>Map Selection</li>
                                     <br>
                                     <dt>A list featuring all the map files that currently exist within your project. You must select the one you want your scene to be in.</dt>
                                     <br>
+                                    <li>Event ID</li>
+                                    <br>
+                                    <dt>The event ID number for the event you want your dialogue to be in. To learn how to find an event's ID number, please refer to <a href="#howToID">this section</a>.</dt>
+                                    <br>
                                     <li>Script Selection</li>
                                     <br>
                                     <dt>Your script, selected from your computer. Your script format must be "txt". To learn how to write scripts for Fangan Maker, please refer to <a href="#howToScript">this section</a>.</dt>
-                                    <br>
-                                    <li>Event Trigger</li>
-                                    <br>
-                                    <dt>The event trigger dictates how your event will activate in RPG Maker. For automatic scenes, the default setting of "Parallel" is suggested. If you want your scene to activate when approaching a particular character, "Action Button" is suggested.</dt>
-                                    <br>
-                                    <dt>Please note that the event trigger will not update unless you press the "Change Event Trigger" button. It will not update when simply clicking the "Add Dialogue" button. </dt>
                                     <br>
                                 </ul>
                             </div>
@@ -1412,7 +1400,7 @@
                                     <br>
                                     <dt>The position your text will appear on screen for this Free Time Event.</dt>
                                     <br>
-                                    <li>Text Background:</li>
+                                    <li>Text Window Background:</li>
                                     <br>
                                     <dt>The background your text will have for this Free Time Event.</dt>
                                     <br>
