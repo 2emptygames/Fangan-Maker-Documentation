@@ -1,4 +1,6 @@
 const button = document.getElementById("button");
+const gamesButton = document.getElementById("games");
+const toolsButton = document.getElementById("tools");
 const itchioButton = document.getElementById("itchio");
 const gamejoltButton = document.getElementById("gamejolt");
 const discordButton = document.getElementById("discord");
@@ -7,6 +9,14 @@ const youtubeButton = document.getElementById("youtube");
 
 button.onclick = async () => {
     window.location.href = "docs.html";
+}
+
+gamesButton.onclick = async () => {
+    window.location.href = "games.html";
+}
+
+toolsButton.onclick = async () => {
+    window.location.href = "tools.html";
 }
 
 youtubeButton.onclick = async () => {
@@ -22,9 +32,9 @@ discordButton.onclick = async () => {
 }
 
 itchioButton.onclick = async () => {
-    window.location.href = "index.html";
+    window.location.href = "https://2empty.itch.io/fangan-maker";
 }
 
 gamejoltButton.onclick = async () => {
-    window.location.href = "index.html";
+    window.location.href = "https://gamejolt.com/games/fanganmaker/1115252";
 }
